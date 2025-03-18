@@ -1,0 +1,69 @@
+
+		<link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css' integrity='sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=' crossorigin=''/>
+		<script src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js' integrity='sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=' crossorigin=''></script>
+		<div id='map' style='width: 100%; height: 100%; font-size: 25px; margin: 0; border-radius: 0px; border: 2px solid #3c546b;'></div>
+<script>
+		var map = L.map('map').setView([33.90340276861998,0.4339599609375009], 7);
+
+		var iPointsArray = [["35.58292","9.718677","ID = 0</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Aquae Regiae</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 35.58292</br>LONGITUDE = 9.718677"],["36.558800741051954","8.753890324119414","ID = 1</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Bulla Regia</br>GEOMETRY = point</br>TYPE = regius</br>LATITUDE = 36.558800741051954</br>LONGITUDE = 8.753890324119414"],["35.31125173116338","6.643524529948201","ID = 2</br>WORLD_REGION = Algérie</br>PLACE_NAME = Aurès</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 35.31125173116338</br>LONGITUDE = 6.643524529948201"],["37.08339474393324","11.038889858107055","ID = 3</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Cape Bon</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 37.08339474393324</br>LONGITUDE = 11.038889858107055"],["36.850806409922974","10.328663013074339","ID = 4</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Carthago</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.850806409922974</br>LONGITUDE = 10.328663013074339"],["36.57774243266451","2.5430522464753653","ID = 5</br>WORLD_REGION = Algérie</br>PLACE_NAME = Castellum des Thudedenses</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.57774243266451</br>LONGITUDE = 2.5430522464753653"],["33.74928579960535","-3.5567503103836797","ID = 6</br>WORLD_REGION = Maroc</br>PLACE_NAME = Castellum 'au-dessus' de la Mulucha</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 33.74928579960535</br>LONGITUDE = -3.5567503103836797"],["34.96011004556995","-4.880508191942379","ID = 7</br>WORLD_REGION = Maroc</br>PLACE_NAME = évêché Regiensis (Césarienne ou Tingitane)</br>GEOMETRY = polygone</br>TYPE = regius</br>LATITUDE = 34.96011004556995</br>LONGITUDE = -4.880508191942379"],["36.36338070322103","6.607072682317123","ID = 8</br>WORLD_REGION = Algérie</br>PLACE_NAME = Cirta</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 36.36338070322103</br>LONGITUDE = 6.607072682317123"],["34.912194315546316","7.087160573117063","ID = 9</br>WORLD_REGION = Algérie</br>PLACE_NAME = Nememcha</br>GEOMETRY = point</br>TYPE = regius</br>LATITUDE = 34.912194315546316</br>LONGITUDE = 7.087160573117063"],["35.45741168966","-0.6189451812869332","ID = 10</br>WORLD_REGION = Algérie</br>PLACE_NAME = Regiae / Arbal (près d'Oran)</br>GEOMETRY = polygone</br>TYPE = regius</br>LATITUDE = 35.45741168966</br>LONGITUDE = -0.6189451812869332"],["36.36645025625052","6.59086263302607","ID = 11</br>WORLD_REGION = Algérie</br>PLACE_NAME = Suburbures Regiani (Ouest de Cirta)</br>GEOMETRY = polygone</br>TYPE = regius</br>LATITUDE = 36.36645025625052</br>LONGITUDE = 6.59086263302607"],["35.406553139541393","8.116803836460225","ID = 12</br>WORLD_REGION = Algérie</br>PLACE_NAME = Theveste</br>GEOMETRY = point</br>TYPE = regius</br>LATITUDE = 35.406553139541393</br>LONGITUDE = 8.116803836460225"],["36.37221835634062","6.600561205581001","ID = 13</br>WORLD_REGION = Algérie</br>PLACE_NAME = turris regia</br>GEOMETRY = point</br>TYPE = regius</br>LATITUDE = 36.37221835634062</br>LONGITUDE = 6.600561205581001"],["35.348951973640396","5.3458467750285035","ID = 14</br>WORLD_REGION = Algérie</br>PLACE_NAME = évêché Villaregiensis / Villa Regia (Tubunae/Tobna)</br>GEOMETRY = polygone</br>TYPE = regius</br>LATITUDE = 35.348951973640396</br>LONGITUDE = 5.3458467750285035"],["35.34834749851243","5.351464468388069","ID = 15</br>WORLD_REGION = Algérie</br>PLACE_NAME = Thubuna (Tobna)</br>GEOMETRY = point</br>TYPE = regius</br>LATITUDE = 35.34834749851243</br>LONGITUDE = 5.351464468388069"],["36.56587301385348","9.370575903723749","ID = 16</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Fundus Villa Magna Variana siue Mappalia Siga (Henchir Mettich)</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.56587301385348</br>LONGITUDE = 9.370575903723749"],["36.88338787538468","7.751911269883357","ID = 17</br>WORLD_REGION = Algérie</br>PLACE_NAME = Germaniniciana (près d'Hippo regius)</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.88338787538468</br>LONGITUDE = 7.751911269883357"],["37.058226441545834","10.062526881969557","ID = 18</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Grandes Plaines</br>GEOMETRY = polygon</br>TYPE = foncier + regius</br>LATITUDE = 37.058226441545834</br>LONGITUDE = 10.062526881969557"],["36.88217983962333","7.749633804536083","ID = 19</br>WORLD_REGION = Algérie</br>PLACE_NAME = Hippo (Regius)</br>GEOMETRY = polygon</br>TYPE = foncier + regius</br>LATITUDE = 36.88217983962333</br>LONGITUDE = 7.749633804536083"],["36.77649477807229","3.05852517226429","ID = 20</br>WORLD_REGION = Algérie</br>PLACE_NAME = Icosium</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.77649477807229</br>LONGITUDE = 3.05852517226429"],["35.85532181583911","9.208245798625953","ID = 21</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Mactar</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 35.85532181583911</br>LONGITUDE = 9.208245798625953"],["37.00611361053785","10.057685042503348","ID = 22</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Medjerda</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 37.00611361053785</br>LONGITUDE = 10.057685042503348"],["35.707103","6.434614","ID = 23</br>WORLD_REGION = Algérie</br>PLACE_NAME = Medracen</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 35.707103</br>LONGITUDE = 6.434614"],["36.36277136874833","9.399142883589917","ID = 24</br>WORLD_REGION = Tunisie</br>PLACE_NAME = oued Siliana</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 36.36277136874833</br>LONGITUDE = 9.399142883589917"],["36.36086295733698","9.000347962130416","ID = 25</br>WORLD_REGION = Tunisie</br>PLACE_NAME = oued Tessa</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 36.36086295733698</br>LONGITUDE = 9.000347962130416"],["36.86213536495874","6.9054114683460215","ID = 26</br>WORLD_REGION = Algérie</br>PLACE_NAME = Rusicade</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.86213536495874</br>LONGITUDE = 6.9054114683460215"],["36.44254531604506","9.195318517494009","ID = 27</br>WORLD_REGION = Tunisie</br>PLACE_NAME = saltus Blandianus</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 36.44254531604506</br>LONGITUDE = 9.195318517494009"],["36.605963","9.24277","ID = 28</br>WORLD_REGION = Tunisie</br>PLACE_NAME = saltus Lamianus</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 36.605963</br>LONGITUDE = 9.24277"],["36.17382658344858","8.704080058583148","ID = 29</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Sicca</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.17382658344858</br>LONGITUDE = 8.704080058583148"],["36.272140","6.725088","ID = 30</br>WORLD_REGION = Algérie</br>PLACE_NAME = Siga</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.272140</br>LONGITUDE = 6.725088"],["36.49184915169899","8.574790540353776","ID = 31</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Smitthus</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.49184915169899</br>LONGITUDE = 8.574790540353776"],["36.58441525123951","2.5713354292691473","ID = 32</br>WORLD_REGION = Algérie</br>PLACE_NAME = Statio Liviana</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.58441525123951</br>LONGITUDE = 2.5713354292691473"],["36.46684958609205","7.433337110788435","ID = 33</br>WORLD_REGION = Algérie</br>PLACE_NAME = Suthul</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 36.46684958609205</br>LONGITUDE = 7.433337110788435"],["35.575759170222625","8.6699447911646","ID = 34</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thala</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 35.575759170222625</br>LONGITUDE = 8.6699447911646"],["34.966660130622884","8.584326158547299","ID = 35</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thelepte</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 34.966660130622884</br>LONGITUDE = 8.584326158547299"],["34.968890001681615","8.582104583362154","ID = 36</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Musunii Regiani</br>GEOMETRY = polygone</br>TYPE = regius</br>LATITUDE = 34.968890001681615</br>LONGITUDE = 8.582104583362154"],["36.50594041556087","9.082147040986573","ID = 37</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thibaris</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.50594041556087</br>LONGITUDE = 9.082147040986573"],["36.64092032076405","10.14192979819157","ID = 38</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thimida Regia / La Mohammedia (?)</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.64092032076405</br>LONGITUDE = 10.14192979819157"],["36.52840618562201","8.466808287613928","ID = 39</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thuburnica</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.52840618562201</br>LONGITUDE = 8.466808287613928"],["36.420154","9.220169","ID = 40</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thugga</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.420154</br>LONGITUDE = 9.220169"],["35.970262276217305","9.265390713149772","ID = 41</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thusca</br>GEOMETRY = polygon</br>TYPE = foncier</br>LATITUDE = 35.970262276217305</br>LONGITUDE = 9.265390713149772"],["35.299991203369366","10.716717293299878","ID = 42</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Thysdrus</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 35.299991203369366</br>LONGITUDE = 10.716717293299878"],["35.48726976368534","6.467676502830097","ID = 43</br>WORLD_REGION = Algérie</br>PLACE_NAME = Timgad</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 35.48726976368534</br>LONGITUDE = 6.467676502830097"],["36.59410844333932","2.443390206032822","ID = 44</br>WORLD_REGION = Algérie</br>PLACE_NAME = Tipasa</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.59410844333932</br>LONGITUDE = 2.443390206032822"],["37.059456","10.063029","ID = 45</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Utique</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 37.059456</br>LONGITUDE = 10.063029"],["36.412427069336914","9.085188528076321","ID = 46</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Vehi Maius</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.412427069336914</br>LONGITUDE = 9.085188528076321"],["36.610426042303494","10.1692145628974","ID = 47</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Vthina</br>GEOMETRY = point</br>TYPE = foncier</br>LATITUDE = 36.610426042303494</br>LONGITUDE = 10.1692145628974"],["36.11186690594038","9.285526022409872","ID = 48</br>WORLD_REGION = Tunisie</br>PLACE_NAME = Zama</br>GEOMETRY = point</br>TYPE = foncier + regius</br>LATITUDE = 36.11186690594038</br>LONGITUDE = 9.285526022409872"]];
+
+		new L.tileLayer('https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> <a href="https://github.com/zanniadevweb/cms_r-lite-web-gis">- Customized by Alexandre Zanni</a>',
+		maxNativeZoom:19,
+		maxZoom: 19,
+		noWrap: true
+		}).addTo(map);
+		L.control.scale().addTo(map);
+
+		for (var iPoints = 0; iPoints < iPointsArray.length; iPoints++) {
+			createPoint(iPointsArray[iPoints][0],iPointsArray[iPoints][1],iPointsArray[iPoints][2]);
+		}
+
+		fillPolygons("");
+
+		function fillPolygons(polygonLinesForHtmlExport) {
+			if (polygonLinesForHtmlExport !== '') {
+				if (polygonLinesForHtmlExport.includes('|')) {
+					fillPolygonsLoop(polygonLinesForHtmlExport.split('|'));
+				} else {
+					fillPolygonsLoop(polygonLinesForHtmlExport);
+				}
+			}
+		}
+
+		function fillPolygonsLoop(polygonLinesFromFile) {
+			var currPolyPointValues = '';
+			var currPolyPointValSeparated = [];
+			var currPolyPointValue = '';
+			var currPolyPointValuesAsArray = [];
+			var currPolyPointsColor = '';
+			var currPolyPointsTooltip = '';
+			for (var ipolygonLinesFromFile = 0; ipolygonLinesFromFile < polygonLinesFromFile.length; ipolygonLinesFromFile++) {
+				if (polygonLinesFromFile[ipolygonLinesFromFile] !== '') {
+					currPolyPointValues = polygonLinesFromFile[ipolygonLinesFromFile].split('.color')[0].replace('(','').replace(')','');
+					currPolyPointsColor = polygonLinesFromFile[ipolygonLinesFromFile].split('.color(')[1].split(')')[0].replaceAll('\'','');
+					currPolyPointsTooltip = polygonLinesFromFile[ipolygonLinesFromFile].split('.tooltip(')[1].replaceAll('"','').slice(0,-1);
+
+					currPolyPointValSeparated = currPolyPointValues.split(']');
+					for (var icurrPolyPointValues = 0; icurrPolyPointValues < currPolyPointValSeparated.length; icurrPolyPointValues++) {
+						if ( currPolyPointValSeparated[icurrPolyPointValues] !== '') {
+							currPolyPointValue = currPolyPointValSeparated[icurrPolyPointValues].split('[')[1];
+							currPolyPointValuesAsArray.push(currPolyPointValue.replace(' ', '').split(','));
+						}
+					}
+					createPolygon([currPolyPointValuesAsArray], currPolyPointsColor, currPolyPointsTooltip);
+					currPolyPointValuesAsArray = [];
+					currPolyPointsColor = '';
+					currPolyPointsTooltip = '';
+				}
+			}
+		}
+
+		function createPolygon(polyPointsValues, polyPointsColor, polyPointsTooltip) {
+			new L.polygon(polyPointsValues).setStyle({fillColor: polyPointsColor, color: polyPointsColor}).addTo(map).bindTooltip(polyPointsTooltip, {permanent: true, direction:"center"});
+		}
+
+		function createPoint(latitude, longitude, label) {
+			new L.marker([latitude,longitude]).bindPopup(label + '</br>').addTo(map);
+		}
+	</script>
